@@ -68,6 +68,7 @@
             this.txt_sks.SelectedText = "";
             this.txt_sks.Size = new System.Drawing.Size(300, 30);
             this.txt_sks.TabIndex = 80;
+            this.txt_sks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sks_KeyPress);
             // 
             // lb_nadep
             // 

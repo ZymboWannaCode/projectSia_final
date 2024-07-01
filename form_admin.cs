@@ -19,7 +19,8 @@ namespace projectSia_final
             InitializeComponent();
         }
         private string connectionString = "Data Source=ZYMBO\\SQLEXPRESS;Initial Catalog=dbhogwartsuniv;User ID=sa;Password=zymbo;";
-        
+        private static string pattern = @"^[^\s@]+@[^\s@]+\.[^\s@]+$";
+        Regex regex = new Regex(pattern);
         private void form_admin_Load(object sender, EventArgs e)
         {
             fillCb();
@@ -47,11 +48,19 @@ namespace projectSia_final
 
         private void bt_update_Click(object sender, EventArgs e)
         {
+            if (!regex.IsMatch(txt_email.Text))
+            {
+                return;
+            }
             updatedata();
         }
 
         private void bt_insert_Click(object sender, EventArgs e)
         {
+            if (!regex.IsMatch(txt_email.Text))
+            {
+                return;
+            }
             insertdata();
         }
 
@@ -240,6 +249,33 @@ namespace projectSia_final
             {
                 e.Handled = true;
             }
+        }
+
+        private bool formIsEmpty()
+        {
+            String kode, prodi, nadep, nabel, gender, telp, email, pass;
+            kode = txt_kode.Text;
+            prodi = cb_prodi.Text;
+            nadep = txt_nadep.Text;
+            nabel = txt_nabel.Text;
+            gender = cb_gender.Text;
+            telp = txt_telp.Text;
+            email = txt_email.Text;
+            pass = txt_pass.Text;
+            return emptyCheck(kode, prodi, nadep, nabel, gender, telp, email, pass);
+        }
+
+        private bool emptyCheck(params string[] text)
+        {
+            foreach (string s in text)
+            {
+                if (string.IsNullOrEmpty(s))
+                {
+                    // messagebox pesan error disini
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

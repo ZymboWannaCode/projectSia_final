@@ -128,6 +128,7 @@
             this.txt_telp.SelectedText = "";
             this.txt_telp.Size = new System.Drawing.Size(300, 30);
             this.txt_telp.TabIndex = 90;
+            this.txt_telp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telp_KeyPress);
             // 
             // lb_nadep
             // 

@@ -206,5 +206,41 @@ namespace projectSia_final
             txt_nama.Text = "";
             txt_sks.Text = "";
         }
+
+        private void txt_sks_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Mencegah karakter non-digit
+            }
+
+            // Memeriksa panjang teks saat ini
+            if (txt_sks.Text.Length >= 1 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool formIsEmpty()
+        {
+            String kode, nama, sks;
+            kode = txt_kode.Text;
+            nama = txt_nama.Text;
+            sks = txt_sks.Text;
+            return emptyCheck(kode, nama, sks);
+        }
+
+        private bool emptyCheck(params string[] text)
+        {
+            foreach (string s in text)
+            {
+                if (string.IsNullOrEmpty(s))
+                {
+                    // messagebox pesan error disini
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

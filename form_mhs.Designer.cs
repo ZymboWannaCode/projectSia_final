@@ -32,7 +32,7 @@
             this.lb_pass = new System.Windows.Forms.Label();
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_email = new System.Windows.Forms.Label();
-            this.cb_prodi = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cb_kelas = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_telp = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_telp = new System.Windows.Forms.Label();
             this.txt_nabel = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,12 +50,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dp_tgl = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_gender = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_alamat = new Guna.UI2.WinForms.Guna2TextBox();
             this.bt_clear = new Guna.UI2.WinForms.Guna2Button();
             this.bt_update = new Guna.UI2.WinForms.Guna2Button();
             this.bt_insert = new Guna.UI2.WinForms.Guna2Button();
+            this.cb_gender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // txt_year
@@ -86,6 +86,7 @@
             this.txt_year.SelectedText = "";
             this.txt_year.Size = new System.Drawing.Size(300, 32);
             this.txt_year.TabIndex = 76;
+            this.txt_year.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_year_KeyPress);
             // 
             // lb_pass
             // 
@@ -140,30 +141,31 @@
             this.lb_email.TabIndex = 79;
             this.lb_email.Text = "Email*";
             // 
-            // cb_prodi
+            // cb_kelas
             // 
-            this.cb_prodi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cb_prodi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.cb_prodi.BorderColor = System.Drawing.Color.White;
-            this.cb_prodi.BorderRadius = 13;
-            this.cb_prodi.BorderThickness = 2;
-            this.cb_prodi.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.cb_prodi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.cb_prodi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_prodi.DropDownHeight = 100;
-            this.cb_prodi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_prodi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.cb_prodi.FocusedColor = System.Drawing.Color.White;
-            this.cb_prodi.FocusedState.BorderColor = System.Drawing.Color.White;
-            this.cb_prodi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_prodi.ForeColor = System.Drawing.Color.White;
-            this.cb_prodi.IntegralHeight = false;
-            this.cb_prodi.ItemHeight = 25;
-            this.cb_prodi.Location = new System.Drawing.Point(223, 234);
-            this.cb_prodi.Name = "cb_prodi";
-            this.cb_prodi.Size = new System.Drawing.Size(300, 31);
-            this.cb_prodi.TabIndex = 66;
-            this.cb_prodi.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.cb_kelas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cb_kelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.cb_kelas.BorderColor = System.Drawing.Color.White;
+            this.cb_kelas.BorderRadius = 13;
+            this.cb_kelas.BorderThickness = 2;
+            this.cb_kelas.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.cb_kelas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
+            this.cb_kelas.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_kelas.DropDownHeight = 100;
+            this.cb_kelas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_kelas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.cb_kelas.FocusedColor = System.Drawing.Color.White;
+            this.cb_kelas.FocusedState.BorderColor = System.Drawing.Color.White;
+            this.cb_kelas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_kelas.ForeColor = System.Drawing.Color.White;
+            this.cb_kelas.IntegralHeight = false;
+            this.cb_kelas.ItemHeight = 25;
+            this.cb_kelas.Location = new System.Drawing.Point(223, 234);
+            this.cb_kelas.Name = "cb_kelas";
+            this.cb_kelas.Size = new System.Drawing.Size(300, 31);
+            this.cb_kelas.TabIndex = 66;
+            this.cb_kelas.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.cb_kelas.SelectedIndexChanged += new System.EventHandler(this.cb_prodi_SelectedIndexChanged);
             // 
             // txt_telp
             // 
@@ -193,6 +195,7 @@
             this.txt_telp.SelectedText = "";
             this.txt_telp.Size = new System.Drawing.Size(300, 32);
             this.txt_telp.TabIndex = 70;
+            this.txt_telp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telp_KeyPress);
             // 
             // lb_telp
             // 
@@ -235,6 +238,7 @@
             this.txt_nabel.SelectedText = "";
             this.txt_nabel.Size = new System.Drawing.Size(300, 32);
             this.txt_nabel.TabIndex = 68;
+            this.txt_nabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nadep_KeyPress);
             // 
             // lb_nabel
             // 
@@ -276,6 +280,7 @@
             this.txt_nadep.SelectedText = "";
             this.txt_nadep.Size = new System.Drawing.Size(300, 32);
             this.txt_nadep.TabIndex = 69;
+            this.txt_nadep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nadep_KeyPress);
             // 
             // lb_nadep
             // 
@@ -404,6 +409,7 @@
             this.txt_nik.SelectedText = "";
             this.txt_nik.Size = new System.Drawing.Size(300, 32);
             this.txt_nik.TabIndex = 69;
+            this.txt_nik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nik_KeyPress);
             // 
             // label2
             // 
@@ -463,6 +469,7 @@
             this.dp_tgl.BorderColor = System.Drawing.Color.White;
             this.dp_tgl.BorderRadius = 10;
             this.dp_tgl.BorderThickness = 2;
+            this.dp_tgl.Checked = true;
             this.dp_tgl.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.dp_tgl.FillColor = System.Drawing.Color.Transparent;
             this.dp_tgl.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -489,35 +496,6 @@
             this.label4.Size = new System.Drawing.Size(81, 22);
             this.label4.TabIndex = 71;
             this.label4.Text = "Gender*";
-            // 
-            // txt_gender
-            // 
-            this.txt_gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_gender.BorderColor = System.Drawing.Color.White;
-            this.txt_gender.BorderRadius = 10;
-            this.txt_gender.BorderThickness = 2;
-            this.txt_gender.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_gender.DefaultText = "";
-            this.txt_gender.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.txt_gender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.txt_gender.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.txt_gender.DisabledState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_gender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_gender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_gender.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gender.ForeColor = System.Drawing.Color.White;
-            this.txt_gender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_gender.Location = new System.Drawing.Point(223, 570);
-            this.txt_gender.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_gender.MaxLength = 20;
-            this.txt_gender.Name = "txt_gender";
-            this.txt_gender.PasswordChar = '\0';
-            this.txt_gender.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_gender.PlaceholderText = "";
-            this.txt_gender.SelectedText = "";
-            this.txt_gender.Size = new System.Drawing.Size(300, 32);
-            this.txt_gender.TabIndex = 70;
             // 
             // label5
             // 
@@ -636,12 +614,38 @@
             this.bt_insert.TextOffset = new System.Drawing.Point(-10, 0);
             this.bt_insert.Click += new System.EventHandler(this.bt_insert_Click);
             // 
+            // cb_gender
+            // 
+            this.cb_gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cb_gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.cb_gender.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.BorderRadius = 13;
+            this.cb_gender.BorderThickness = 2;
+            this.cb_gender.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
+            this.cb_gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_gender.DropDownHeight = 100;
+            this.cb_gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_gender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.cb_gender.FocusedColor = System.Drawing.Color.White;
+            this.cb_gender.FocusedState.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_gender.ForeColor = System.Drawing.Color.White;
+            this.cb_gender.IntegralHeight = false;
+            this.cb_gender.ItemHeight = 25;
+            this.cb_gender.Location = new System.Drawing.Point(223, 567);
+            this.cb_gender.Name = "cb_gender";
+            this.cb_gender.Size = new System.Drawing.Size(300, 31);
+            this.cb_gender.TabIndex = 86;
+            this.cb_gender.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            // 
             // form_mhs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(584, 1041);
+            this.Controls.Add(this.cb_gender);
             this.Controls.Add(this.bt_clear);
             this.Controls.Add(this.bt_update);
             this.Controls.Add(this.bt_insert);
@@ -650,10 +654,9 @@
             this.Controls.Add(this.lb_pass);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.lb_email);
-            this.Controls.Add(this.cb_prodi);
+            this.Controls.Add(this.cb_kelas);
             this.Controls.Add(this.txt_alamat);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_gender);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_telp);
             this.Controls.Add(this.lb_telp);
@@ -686,7 +689,7 @@
         private System.Windows.Forms.Label lb_pass;
         private Guna.UI2.WinForms.Guna2TextBox txt_email;
         private System.Windows.Forms.Label lb_email;
-        private Guna.UI2.WinForms.Guna2ComboBox cb_prodi;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_kelas;
         private Guna.UI2.WinForms.Guna2TextBox txt_telp;
         private System.Windows.Forms.Label lb_telp;
         private Guna.UI2.WinForms.Guna2TextBox txt_nabel;
@@ -704,11 +707,11 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DateTimePicker dp_tgl;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txt_gender;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txt_alamat;
         private Guna.UI2.WinForms.Guna2Button bt_clear;
         private Guna.UI2.WinForms.Guna2Button bt_update;
         private Guna.UI2.WinForms.Guna2Button bt_insert;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_gender;
     }
 }

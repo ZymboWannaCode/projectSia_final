@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.cb_prodi = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txt_lokasi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lb_telp = new System.Windows.Forms.Label();
-            this.txt_ruang = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lb_nabel = new System.Windows.Forms.Label();
             this.txt_nama = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_nadep = new System.Windows.Forms.Label();
             this.txt_kode = new Guna.UI2.WinForms.Guna2TextBox();
@@ -68,89 +64,6 @@
             this.cb_prodi.Size = new System.Drawing.Size(300, 31);
             this.cb_prodi.TabIndex = 66;
             this.cb_prodi.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            // 
-            // txt_lokasi
-            // 
-            this.txt_lokasi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_lokasi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_lokasi.BorderColor = System.Drawing.Color.White;
-            this.txt_lokasi.BorderRadius = 10;
-            this.txt_lokasi.BorderThickness = 2;
-            this.txt_lokasi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_lokasi.DefaultText = "";
-            this.txt_lokasi.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.txt_lokasi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.txt_lokasi.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.txt_lokasi.DisabledState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_lokasi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_lokasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lokasi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lokasi.ForeColor = System.Drawing.Color.White;
-            this.txt_lokasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lokasi.Location = new System.Drawing.Point(226, 464);
-            this.txt_lokasi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_lokasi.MaxLength = 20;
-            this.txt_lokasi.Name = "txt_lokasi";
-            this.txt_lokasi.PasswordChar = '\0';
-            this.txt_lokasi.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_lokasi.PlaceholderText = "";
-            this.txt_lokasi.SelectedText = "";
-            this.txt_lokasi.Size = new System.Drawing.Size(300, 30);
-            this.txt_lokasi.TabIndex = 70;
-            // 
-            // lb_telp
-            // 
-            this.lb_telp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lb_telp.AutoSize = true;
-            this.lb_telp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.lb_telp.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_telp.ForeColor = System.Drawing.Color.White;
-            this.lb_telp.Location = new System.Drawing.Point(54, 468);
-            this.lb_telp.Name = "lb_telp";
-            this.lb_telp.Size = new System.Drawing.Size(82, 22);
-            this.lb_telp.TabIndex = 71;
-            this.lb_telp.Text = "Location";
-            // 
-            // txt_ruang
-            // 
-            this.txt_ruang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_ruang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_ruang.BorderColor = System.Drawing.Color.White;
-            this.txt_ruang.BorderRadius = 10;
-            this.txt_ruang.BorderThickness = 2;
-            this.txt_ruang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_ruang.DefaultText = "";
-            this.txt_ruang.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.txt_ruang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.txt_ruang.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.txt_ruang.DisabledState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_ruang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_ruang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_ruang.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ruang.ForeColor = System.Drawing.Color.White;
-            this.txt_ruang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_ruang.Location = new System.Drawing.Point(226, 408);
-            this.txt_ruang.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_ruang.MaxLength = 20;
-            this.txt_ruang.Name = "txt_ruang";
-            this.txt_ruang.PasswordChar = '\0';
-            this.txt_ruang.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_ruang.PlaceholderText = "";
-            this.txt_ruang.SelectedText = "";
-            this.txt_ruang.Size = new System.Drawing.Size(300, 30);
-            this.txt_ruang.TabIndex = 68;
-            // 
-            // lb_nabel
-            // 
-            this.lb_nabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lb_nabel.AutoSize = true;
-            this.lb_nabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nabel.ForeColor = System.Drawing.Color.White;
-            this.lb_nabel.Location = new System.Drawing.Point(55, 412);
-            this.lb_nabel.Name = "lb_nabel";
-            this.lb_nabel.Size = new System.Drawing.Size(69, 22);
-            this.lb_nabel.TabIndex = 72;
-            this.lb_nabel.Text = "Room*";
             // 
             // txt_nama
             // 
@@ -353,10 +266,6 @@
             this.Controls.Add(this.bt_update);
             this.Controls.Add(this.bt_insert);
             this.Controls.Add(this.cb_prodi);
-            this.Controls.Add(this.txt_lokasi);
-            this.Controls.Add(this.lb_telp);
-            this.Controls.Add(this.txt_ruang);
-            this.Controls.Add(this.lb_nabel);
             this.Controls.Add(this.txt_nama);
             this.Controls.Add(this.lb_nadep);
             this.Controls.Add(this.txt_kode);
@@ -374,10 +283,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2ComboBox cb_prodi;
-        private Guna.UI2.WinForms.Guna2TextBox txt_lokasi;
-        private System.Windows.Forms.Label lb_telp;
-        private Guna.UI2.WinForms.Guna2TextBox txt_ruang;
-        private System.Windows.Forms.Label lb_nabel;
         private Guna.UI2.WinForms.Guna2TextBox txt_nama;
         private System.Windows.Forms.Label lb_nadep;
         private Guna.UI2.WinForms.Guna2TextBox txt_kode;

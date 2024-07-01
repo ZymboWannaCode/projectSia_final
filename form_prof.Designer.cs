@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dp_tgl = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txt_jafung = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lb_pass = new System.Windows.Forms.Label();
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_email = new System.Windows.Forms.Label();
             this.cb_prodi = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -65,6 +63,7 @@
             this.dp_tgl.BorderColor = System.Drawing.Color.White;
             this.dp_tgl.BorderRadius = 10;
             this.dp_tgl.BorderThickness = 2;
+            this.dp_tgl.Checked = true;
             this.dp_tgl.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.dp_tgl.FillColor = System.Drawing.Color.Transparent;
             this.dp_tgl.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,47 +77,6 @@
             this.dp_tgl.Size = new System.Drawing.Size(300, 35);
             this.dp_tgl.TabIndex = 105;
             this.dp_tgl.Value = new System.DateTime(2024, 6, 30, 15, 54, 40, 901);
-            // 
-            // txt_jafung
-            // 
-            this.txt_jafung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_jafung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_jafung.BorderColor = System.Drawing.Color.White;
-            this.txt_jafung.BorderRadius = 10;
-            this.txt_jafung.BorderThickness = 2;
-            this.txt_jafung.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_jafung.DefaultText = "";
-            this.txt_jafung.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.txt_jafung.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.txt_jafung.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.txt_jafung.DisabledState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_jafung.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_jafung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_jafung.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_jafung.ForeColor = System.Drawing.Color.White;
-            this.txt_jafung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_jafung.Location = new System.Drawing.Point(231, 767);
-            this.txt_jafung.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_jafung.MaxLength = 20;
-            this.txt_jafung.Name = "txt_jafung";
-            this.txt_jafung.PasswordChar = '\0';
-            this.txt_jafung.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_jafung.PlaceholderText = "";
-            this.txt_jafung.SelectedText = "";
-            this.txt_jafung.Size = new System.Drawing.Size(300, 35);
-            this.txt_jafung.TabIndex = 101;
-            // 
-            // lb_pass
-            // 
-            this.lb_pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lb_pass.AutoSize = true;
-            this.lb_pass.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_pass.ForeColor = System.Drawing.Color.White;
-            this.lb_pass.Location = new System.Drawing.Point(59, 771);
-            this.lb_pass.Name = "lb_pass";
-            this.lb_pass.Size = new System.Drawing.Size(94, 22);
-            this.lb_pass.TabIndex = 103;
-            this.lb_pass.Text = "Job Role*";
             // 
             // txt_email
             // 
@@ -246,7 +204,7 @@
             this.txt_special.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_special.ForeColor = System.Drawing.Color.White;
             this.txt_special.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_special.Location = new System.Drawing.Point(231, 824);
+            this.txt_special.Location = new System.Drawing.Point(231, 767);
             this.txt_special.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_special.MaxLength = 20;
             this.txt_special.Name = "txt_special";
@@ -264,7 +222,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(59, 828);
+            this.label4.Location = new System.Drawing.Point(59, 771);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 22);
             this.label4.TabIndex = 92;
@@ -298,6 +256,7 @@
             this.txt_telp.SelectedText = "";
             this.txt_telp.Size = new System.Drawing.Size(300, 35);
             this.txt_telp.TabIndex = 90;
+            this.txt_telp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telp_KeyPress);
             // 
             // lb_telp
             // 
@@ -393,6 +352,7 @@
             this.txt_nabel.SelectedText = "";
             this.txt_nabel.Size = new System.Drawing.Size(300, 32);
             this.txt_nabel.TabIndex = 84;
+            this.txt_nabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nadep_KeyPress);
             // 
             // lb_nabel
             // 
@@ -434,6 +394,7 @@
             this.txt_nik.SelectedText = "";
             this.txt_nik.Size = new System.Drawing.Size(300, 32);
             this.txt_nik.TabIndex = 86;
+            this.txt_nik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nik_KeyPress);
             // 
             // txt_nadep
             // 
@@ -463,6 +424,7 @@
             this.txt_nadep.SelectedText = "";
             this.txt_nadep.Size = new System.Drawing.Size(300, 32);
             this.txt_nadep.TabIndex = 87;
+            this.txt_nadep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nadep_KeyPress);
             // 
             // label1
             // 
@@ -517,6 +479,7 @@
             this.txt_kode.SelectedText = "";
             this.txt_kode.Size = new System.Drawing.Size(300, 32);
             this.txt_kode.TabIndex = 83;
+            this.txt_kode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_kode_KeyPress);
             // 
             // lb_prodi
             // 
@@ -691,8 +654,6 @@
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dp_tgl);
-            this.Controls.Add(this.txt_jafung);
-            this.Controls.Add(this.lb_pass);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.lb_email);
             this.Controls.Add(this.cb_prodi);
@@ -729,8 +690,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DateTimePicker dp_tgl;
-        private Guna.UI2.WinForms.Guna2TextBox txt_jafung;
-        private System.Windows.Forms.Label lb_pass;
         private Guna.UI2.WinForms.Guna2TextBox txt_email;
         private System.Windows.Forms.Label lb_email;
         private Guna.UI2.WinForms.Guna2ComboBox cb_prodi;
