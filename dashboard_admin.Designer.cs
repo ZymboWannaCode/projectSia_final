@@ -48,7 +48,7 @@
             this.bt_mhs = new Guna.UI2.WinForms.Guna2Button();
             this.bt_kelas = new Guna.UI2.WinForms.Guna2Button();
             this.bt_matkul = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.bt_prodi = new Guna.UI2.WinForms.Guna2Button();
             this.bt_dashboard = new Guna.UI2.WinForms.Guna2Button();
             this.sub = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
@@ -142,7 +142,7 @@
             this.panel2.Controls.Add(this.bt_mhs);
             this.panel2.Controls.Add(this.bt_kelas);
             this.panel2.Controls.Add(this.bt_matkul);
-            this.panel2.Controls.Add(this.guna2Button2);
+            this.panel2.Controls.Add(this.bt_prodi);
             this.panel2.Controls.Add(this.bt_dashboard);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 242);
@@ -402,25 +402,26 @@
             this.bt_matkul.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bt_matkul.Click += new System.EventHandler(this.bt_matkul_Click);
             // 
-            // guna2Button2
+            // bt_prodi
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.guna2Button2.BorderRadius = 20;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 50);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
-            this.guna2Button2.Size = new System.Drawing.Size(319, 50);
-            this.guna2Button2.TabIndex = 17;
-            this.guna2Button2.Text = "Study Program";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bt_prodi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.bt_prodi.BorderRadius = 20;
+            this.bt_prodi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_prodi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt_prodi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_prodi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt_prodi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bt_prodi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.bt_prodi.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.bt_prodi.ForeColor = System.Drawing.Color.White;
+            this.bt_prodi.Location = new System.Drawing.Point(0, 50);
+            this.bt_prodi.Name = "bt_prodi";
+            this.bt_prodi.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.bt_prodi.Size = new System.Drawing.Size(319, 50);
+            this.bt_prodi.TabIndex = 17;
+            this.bt_prodi.Text = "Study Program";
+            this.bt_prodi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bt_prodi.Click += new System.EventHandler(this.bt_prodi_Click);
             // 
             // bt_dashboard
             // 
@@ -568,7 +569,7 @@
         private Guna.UI2.WinForms.Guna2Button bt_mhs;
         private Guna.UI2.WinForms.Guna2Button bt_kelas;
         private Guna.UI2.WinForms.Guna2Button bt_matkul;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button bt_prodi;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;

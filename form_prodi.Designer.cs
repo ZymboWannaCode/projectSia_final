@@ -184,6 +184,7 @@
             this.bt_back.Size = new System.Drawing.Size(413, 54);
             this.bt_back.TabIndex = 87;
             this.bt_back.Text = "Study Program Form";
+            this.bt_back.Click += new System.EventHandler(this.bt_back_Click);
             // 
             // label1
             // 

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_pass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lb_pass = new System.Windows.Forms.Label();
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_email = new System.Windows.Forms.Label();
             this.cb_prodi = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -46,48 +44,9 @@
             this.bt_update = new Guna.UI2.WinForms.Guna2Button();
             this.bt_insert = new Guna.UI2.WinForms.Guna2Button();
             this.bt_back = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cb_gender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
-            // 
-            // txt_pass
-            // 
-            this.txt_pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_pass.BorderColor = System.Drawing.Color.White;
-            this.txt_pass.BorderRadius = 10;
-            this.txt_pass.BorderThickness = 2;
-            this.txt_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_pass.DefaultText = "";
-            this.txt_pass.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.txt_pass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.txt_pass.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.txt_pass.DisabledState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_pass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_pass.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pass.ForeColor = System.Drawing.Color.White;
-            this.txt_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_pass.Location = new System.Drawing.Point(228, 567);
-            this.txt_pass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_pass.MaxLength = 20;
-            this.txt_pass.Name = "txt_pass";
-            this.txt_pass.PasswordChar = '\0';
-            this.txt_pass.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_pass.PlaceholderText = "";
-            this.txt_pass.SelectedText = "";
-            this.txt_pass.Size = new System.Drawing.Size(300, 30);
-            this.txt_pass.TabIndex = 61;
-            // 
-            // lb_pass
-            // 
-            this.lb_pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lb_pass.AutoSize = true;
-            this.lb_pass.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_pass.ForeColor = System.Drawing.Color.White;
-            this.lb_pass.Location = new System.Drawing.Point(56, 571);
-            this.lb_pass.Name = "lb_pass";
-            this.lb_pass.Size = new System.Drawing.Size(101, 22);
-            this.lb_pass.TabIndex = 63;
-            this.lb_pass.Text = "Password*";
             // 
             // txt_email
             // 
@@ -107,7 +66,7 @@
             this.txt_email.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.White;
             this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Location = new System.Drawing.Point(228, 511);
+            this.txt_email.Location = new System.Drawing.Point(228, 565);
             this.txt_email.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_email.MaxLength = 20;
             this.txt_email.Name = "txt_email";
@@ -124,7 +83,7 @@
             this.lb_email.AutoSize = true;
             this.lb_email.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_email.ForeColor = System.Drawing.Color.White;
-            this.lb_email.Location = new System.Drawing.Point(56, 515);
+            this.lb_email.Location = new System.Drawing.Point(56, 569);
             this.lb_email.Name = "lb_email";
             this.lb_email.Size = new System.Drawing.Size(64, 22);
             this.lb_email.TabIndex = 64;
@@ -173,7 +132,7 @@
             this.txt_telp.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telp.ForeColor = System.Drawing.Color.White;
             this.txt_telp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_telp.Location = new System.Drawing.Point(228, 455);
+            this.txt_telp.Location = new System.Drawing.Point(228, 509);
             this.txt_telp.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_telp.MaxLength = 20;
             this.txt_telp.Name = "txt_telp";
@@ -192,7 +151,7 @@
             this.lb_telp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.lb_telp.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_telp.ForeColor = System.Drawing.Color.White;
-            this.lb_telp.Location = new System.Drawing.Point(56, 459);
+            this.lb_telp.Location = new System.Drawing.Point(56, 513);
             this.lb_telp.Name = "lb_telp";
             this.lb_telp.Size = new System.Drawing.Size(144, 22);
             this.lb_telp.TabIndex = 56;
@@ -432,6 +391,46 @@
             this.bt_back.Text = "Admin Form";
             this.bt_back.Click += new System.EventHandler(this.bt_back_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(57, 458);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 22);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Gender*";
+            // 
+            // cb_gender
+            // 
+            this.cb_gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cb_gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.cb_gender.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.BorderRadius = 13;
+            this.cb_gender.BorderThickness = 2;
+            this.cb_gender.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
+            this.cb_gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_gender.DropDownHeight = 100;
+            this.cb_gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_gender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.cb_gender.FocusedColor = System.Drawing.Color.White;
+            this.cb_gender.FocusedState.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.cb_gender.ForeColor = System.Drawing.Color.White;
+            this.cb_gender.IntegralHeight = false;
+            this.cb_gender.ItemHeight = 25;
+            this.cb_gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cb_gender.Location = new System.Drawing.Point(228, 454);
+            this.cb_gender.Name = "cb_gender";
+            this.cb_gender.Size = new System.Drawing.Size(300, 31);
+            this.cb_gender.TabIndex = 51;
+            this.cb_gender.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            // 
             // form_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,10 +440,9 @@
             this.Controls.Add(this.bt_clear);
             this.Controls.Add(this.bt_update);
             this.Controls.Add(this.bt_insert);
-            this.Controls.Add(this.txt_pass);
-            this.Controls.Add(this.lb_pass);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.lb_email);
+            this.Controls.Add(this.cb_gender);
             this.Controls.Add(this.cb_prodi);
             this.Controls.Add(this.txt_telp);
             this.Controls.Add(this.lb_telp);
@@ -452,6 +450,7 @@
             this.Controls.Add(this.lb_nabel);
             this.Controls.Add(this.txt_nadep);
             this.Controls.Add(this.lb_nadep);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_kode);
             this.Controls.Add(this.lb_prodi);
             this.Controls.Add(this.lb_kode);
@@ -468,8 +467,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button bt_back;
-        private Guna.UI2.WinForms.Guna2TextBox txt_pass;
-        private System.Windows.Forms.Label lb_pass;
         private Guna.UI2.WinForms.Guna2TextBox txt_email;
         private System.Windows.Forms.Label lb_email;
         private Guna.UI2.WinForms.Guna2ComboBox cb_prodi;
@@ -485,5 +482,7 @@
         private Guna.UI2.WinForms.Guna2Button bt_insert;
         private Guna.UI2.WinForms.Guna2Button bt_clear;
         private Guna.UI2.WinForms.Guna2Button bt_update;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_gender;
     }
 }

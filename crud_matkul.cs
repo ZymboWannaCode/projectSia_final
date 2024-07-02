@@ -40,9 +40,10 @@ namespace projectSia_final
 
         private void tbview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            selected[0] = tbview.SelectedCells[0].Value.ToString();
-            selected[1] = tbview.SelectedCells[1].Value.ToString();
-            selected[2] = tbview.SelectedCells[2].Value.ToString();
+            for (int i = 0; i < selected.Length; i++)
+            {
+                selected[i] = tbview.SelectedCells[i].Value.ToString();
+            }
 
             DialogResult act = dataAction.Show();
 

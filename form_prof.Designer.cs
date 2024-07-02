@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dp_tgl = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txt_jafung = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_pass = new System.Windows.Forms.Label();
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_email = new System.Windows.Forms.Label();
@@ -53,11 +52,10 @@
             this.lb_prodi = new System.Windows.Forms.Label();
             this.lb_kode = new System.Windows.Forms.Label();
             this.bt_back = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_pass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.bt_clear = new Guna.UI2.WinForms.Guna2Button();
             this.bt_update = new Guna.UI2.WinForms.Guna2Button();
             this.bt_insert = new Guna.UI2.WinForms.Guna2Button();
+            this.cb_gender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // dp_tgl
@@ -65,12 +63,13 @@
             this.dp_tgl.BorderColor = System.Drawing.Color.White;
             this.dp_tgl.BorderRadius = 10;
             this.dp_tgl.BorderThickness = 2;
+            this.dp_tgl.Checked = true;
             this.dp_tgl.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.dp_tgl.FillColor = System.Drawing.Color.Transparent;
             this.dp_tgl.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dp_tgl.ForeColor = System.Drawing.Color.White;
             this.dp_tgl.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dp_tgl.Location = new System.Drawing.Point(231, 597);
+            this.dp_tgl.Location = new System.Drawing.Point(224, 526);
             this.dp_tgl.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dp_tgl.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dp_tgl.Name = "dp_tgl";
@@ -79,46 +78,17 @@
             this.dp_tgl.TabIndex = 105;
             this.dp_tgl.Value = new System.DateTime(2024, 6, 30, 15, 54, 40, 901);
             // 
-            // txt_jafung
-            // 
-            this.txt_jafung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_jafung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_jafung.BorderColor = System.Drawing.Color.White;
-            this.txt_jafung.BorderRadius = 10;
-            this.txt_jafung.BorderThickness = 2;
-            this.txt_jafung.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_jafung.DefaultText = "";
-            this.txt_jafung.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.txt_jafung.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.txt_jafung.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.txt_jafung.DisabledState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_jafung.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_jafung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_jafung.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_jafung.ForeColor = System.Drawing.Color.White;
-            this.txt_jafung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_jafung.Location = new System.Drawing.Point(231, 767);
-            this.txt_jafung.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_jafung.MaxLength = 20;
-            this.txt_jafung.Name = "txt_jafung";
-            this.txt_jafung.PasswordChar = '\0';
-            this.txt_jafung.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_jafung.PlaceholderText = "";
-            this.txt_jafung.SelectedText = "";
-            this.txt_jafung.Size = new System.Drawing.Size(300, 35);
-            this.txt_jafung.TabIndex = 101;
-            // 
             // lb_pass
             // 
             this.lb_pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_pass.AutoSize = true;
             this.lb_pass.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_pass.ForeColor = System.Drawing.Color.White;
-            this.lb_pass.Location = new System.Drawing.Point(59, 771);
+            this.lb_pass.Location = new System.Drawing.Point(53, 595);
             this.lb_pass.Name = "lb_pass";
-            this.lb_pass.Size = new System.Drawing.Size(94, 22);
+            this.lb_pass.Size = new System.Drawing.Size(81, 22);
             this.lb_pass.TabIndex = 103;
-            this.lb_pass.Text = "Job Role*";
+            this.lb_pass.Text = "Gender*";
             // 
             // txt_email
             // 
@@ -138,7 +108,7 @@
             this.txt_email.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.White;
             this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Location = new System.Drawing.Point(231, 711);
+            this.txt_email.Location = new System.Drawing.Point(224, 778);
             this.txt_email.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_email.MaxLength = 20;
             this.txt_email.Name = "txt_email";
@@ -155,7 +125,7 @@
             this.lb_email.AutoSize = true;
             this.lb_email.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_email.ForeColor = System.Drawing.Color.White;
-            this.lb_email.Location = new System.Drawing.Point(59, 715);
+            this.lb_email.Location = new System.Drawing.Point(53, 784);
             this.lb_email.Name = "lb_email";
             this.lb_email.Size = new System.Drawing.Size(64, 22);
             this.lb_email.TabIndex = 104;
@@ -180,7 +150,7 @@
             this.cb_prodi.ForeColor = System.Drawing.Color.White;
             this.cb_prodi.IntegralHeight = false;
             this.cb_prodi.ItemHeight = 25;
-            this.cb_prodi.Location = new System.Drawing.Point(231, 203);
+            this.cb_prodi.Location = new System.Drawing.Point(224, 213);
             this.cb_prodi.Name = "cb_prodi";
             this.cb_prodi.Size = new System.Drawing.Size(300, 31);
             this.cb_prodi.TabIndex = 82;
@@ -204,7 +174,7 @@
             this.txt_alamat.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_alamat.ForeColor = System.Drawing.Color.White;
             this.txt_alamat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_alamat.Location = new System.Drawing.Point(231, 485);
+            this.txt_alamat.Location = new System.Drawing.Point(224, 652);
             this.txt_alamat.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_alamat.MaxLength = 20;
             this.txt_alamat.Name = "txt_alamat";
@@ -222,7 +192,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(59, 489);
+            this.label5.Location = new System.Drawing.Point(53, 658);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 22);
             this.label5.TabIndex = 91;
@@ -246,7 +216,7 @@
             this.txt_special.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_special.ForeColor = System.Drawing.Color.White;
             this.txt_special.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_special.Location = new System.Drawing.Point(231, 824);
+            this.txt_special.Location = new System.Drawing.Point(224, 841);
             this.txt_special.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_special.MaxLength = 20;
             this.txt_special.Name = "txt_special";
@@ -264,7 +234,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(59, 828);
+            this.label4.Location = new System.Drawing.Point(53, 847);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 22);
             this.label4.TabIndex = 92;
@@ -288,7 +258,7 @@
             this.txt_telp.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telp.ForeColor = System.Drawing.Color.White;
             this.txt_telp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_telp.Location = new System.Drawing.Point(231, 655);
+            this.txt_telp.Location = new System.Drawing.Point(224, 715);
             this.txt_telp.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_telp.MaxLength = 20;
             this.txt_telp.Name = "txt_telp";
@@ -306,7 +276,7 @@
             this.lb_telp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
             this.lb_telp.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_telp.ForeColor = System.Drawing.Color.White;
-            this.lb_telp.Location = new System.Drawing.Point(59, 659);
+            this.lb_telp.Location = new System.Drawing.Point(53, 721);
             this.lb_telp.Name = "lb_telp";
             this.lb_telp.Size = new System.Drawing.Size(144, 22);
             this.lb_telp.TabIndex = 93;
@@ -330,7 +300,7 @@
             this.txt_tpt.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tpt.ForeColor = System.Drawing.Color.White;
             this.txt_tpt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_tpt.Location = new System.Drawing.Point(231, 544);
+            this.txt_tpt.Location = new System.Drawing.Point(224, 463);
             this.txt_tpt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_tpt.MaxLength = 20;
             this.txt_tpt.Name = "txt_tpt";
@@ -347,7 +317,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(60, 604);
+            this.label3.Location = new System.Drawing.Point(54, 532);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 22);
             this.label3.TabIndex = 95;
@@ -359,7 +329,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(60, 548);
+            this.label2.Location = new System.Drawing.Point(54, 469);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 22);
             this.label2.TabIndex = 94;
@@ -383,7 +353,7 @@
             this.txt_nabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nabel.ForeColor = System.Drawing.Color.White;
             this.txt_nabel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_nabel.Location = new System.Drawing.Point(231, 371);
+            this.txt_nabel.Location = new System.Drawing.Point(224, 401);
             this.txt_nabel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_nabel.MaxLength = 20;
             this.txt_nabel.Name = "txt_nabel";
@@ -400,7 +370,7 @@
             this.lb_nabel.AutoSize = true;
             this.lb_nabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nabel.ForeColor = System.Drawing.Color.White;
-            this.lb_nabel.Location = new System.Drawing.Point(60, 375);
+            this.lb_nabel.Location = new System.Drawing.Point(54, 406);
             this.lb_nabel.Name = "lb_nabel";
             this.lb_nabel.Size = new System.Drawing.Size(108, 22);
             this.lb_nabel.TabIndex = 96;
@@ -424,7 +394,7 @@
             this.txt_nik.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nik.ForeColor = System.Drawing.Color.White;
             this.txt_nik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_nik.Location = new System.Drawing.Point(231, 261);
+            this.txt_nik.Location = new System.Drawing.Point(224, 275);
             this.txt_nik.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_nik.MaxLength = 20;
             this.txt_nik.Name = "txt_nik";
@@ -453,7 +423,7 @@
             this.txt_nadep.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nadep.ForeColor = System.Drawing.Color.White;
             this.txt_nadep.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_nadep.Location = new System.Drawing.Point(231, 315);
+            this.txt_nadep.Location = new System.Drawing.Point(224, 338);
             this.txt_nadep.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_nadep.MaxLength = 20;
             this.txt_nadep.Name = "txt_nadep";
@@ -470,7 +440,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(59, 265);
+            this.label1.Location = new System.Drawing.Point(53, 280);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 22);
             this.label1.TabIndex = 97;
@@ -482,7 +452,7 @@
             this.lb_nadep.AutoSize = true;
             this.lb_nadep.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nadep.ForeColor = System.Drawing.Color.White;
-            this.lb_nadep.Location = new System.Drawing.Point(60, 319);
+            this.lb_nadep.Location = new System.Drawing.Point(54, 343);
             this.lb_nadep.Name = "lb_nadep";
             this.lb_nadep.Size = new System.Drawing.Size(109, 22);
             this.lb_nadep.TabIndex = 98;
@@ -507,7 +477,7 @@
             this.txt_kode.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_kode.ForeColor = System.Drawing.Color.White;
             this.txt_kode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_kode.Location = new System.Drawing.Point(231, 147);
+            this.txt_kode.Location = new System.Drawing.Point(224, 149);
             this.txt_kode.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txt_kode.MaxLength = 20;
             this.txt_kode.Name = "txt_kode";
@@ -524,7 +494,7 @@
             this.lb_prodi.AutoSize = true;
             this.lb_prodi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_prodi.ForeColor = System.Drawing.Color.White;
-            this.lb_prodi.Location = new System.Drawing.Point(60, 207);
+            this.lb_prodi.Location = new System.Drawing.Point(54, 217);
             this.lb_prodi.Name = "lb_prodi";
             this.lb_prodi.Size = new System.Drawing.Size(90, 22);
             this.lb_prodi.TabIndex = 99;
@@ -536,11 +506,11 @@
             this.lb_kode.AutoSize = true;
             this.lb_kode.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_kode.ForeColor = System.Drawing.Color.White;
-            this.lb_kode.Location = new System.Drawing.Point(60, 151);
+            this.lb_kode.Location = new System.Drawing.Point(54, 154);
             this.lb_kode.Name = "lb_kode";
-            this.lb_kode.Size = new System.Drawing.Size(64, 22);
+            this.lb_kode.Size = new System.Drawing.Size(126, 22);
             this.lb_kode.TabIndex = 100;
-            this.lb_kode.Text = "Code*";
+            this.lb_kode.Text = "Professor ID*";
             // 
             // bt_back
             // 
@@ -562,47 +532,6 @@
             this.bt_back.TabIndex = 81;
             this.bt_back.Text = "Professor Form";
             this.bt_back.Click += new System.EventHandler(this.bt_back_Click);
-            // 
-            // txt_pass
-            // 
-            this.txt_pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_pass.BorderColor = System.Drawing.Color.White;
-            this.txt_pass.BorderRadius = 10;
-            this.txt_pass.BorderThickness = 2;
-            this.txt_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_pass.DefaultText = "";
-            this.txt_pass.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.txt_pass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.txt_pass.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.txt_pass.DisabledState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_pass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.txt_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_pass.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pass.ForeColor = System.Drawing.Color.White;
-            this.txt_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_pass.Location = new System.Drawing.Point(231, 428);
-            this.txt_pass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_pass.MaxLength = 20;
-            this.txt_pass.Name = "txt_pass";
-            this.txt_pass.PasswordChar = '\0';
-            this.txt_pass.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_pass.PlaceholderText = "";
-            this.txt_pass.SelectedText = "";
-            this.txt_pass.Size = new System.Drawing.Size(300, 32);
-            this.txt_pass.TabIndex = 106;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(59, 432);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 22);
-            this.label6.TabIndex = 107;
-            this.label6.Text = "Password*";
             // 
             // bt_clear
             // 
@@ -679,6 +608,31 @@
             this.bt_insert.TextOffset = new System.Drawing.Point(-10, 0);
             this.bt_insert.Click += new System.EventHandler(this.bt_insert_Click);
             // 
+            // cb_gender
+            // 
+            this.cb_gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cb_gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.cb_gender.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.BorderRadius = 13;
+            this.cb_gender.BorderThickness = 2;
+            this.cb_gender.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
+            this.cb_gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_gender.DropDownHeight = 100;
+            this.cb_gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_gender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.cb_gender.FocusedColor = System.Drawing.Color.White;
+            this.cb_gender.FocusedState.BorderColor = System.Drawing.Color.White;
+            this.cb_gender.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_gender.ForeColor = System.Drawing.Color.White;
+            this.cb_gender.IntegralHeight = false;
+            this.cb_gender.ItemHeight = 25;
+            this.cb_gender.Location = new System.Drawing.Point(224, 591);
+            this.cb_gender.Name = "cb_gender";
+            this.cb_gender.Size = new System.Drawing.Size(300, 31);
+            this.cb_gender.TabIndex = 82;
+            this.cb_gender.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            // 
             // form_prof
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,13 +642,11 @@
             this.Controls.Add(this.bt_clear);
             this.Controls.Add(this.bt_update);
             this.Controls.Add(this.bt_insert);
-            this.Controls.Add(this.txt_pass);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.dp_tgl);
-            this.Controls.Add(this.txt_jafung);
             this.Controls.Add(this.lb_pass);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.lb_email);
+            this.Controls.Add(this.cb_gender);
             this.Controls.Add(this.cb_prodi);
             this.Controls.Add(this.txt_alamat);
             this.Controls.Add(this.label5);
@@ -729,7 +681,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DateTimePicker dp_tgl;
-        private Guna.UI2.WinForms.Guna2TextBox txt_jafung;
         private System.Windows.Forms.Label lb_pass;
         private Guna.UI2.WinForms.Guna2TextBox txt_email;
         private System.Windows.Forms.Label lb_email;
@@ -753,10 +704,9 @@
         private System.Windows.Forms.Label lb_prodi;
         private System.Windows.Forms.Label lb_kode;
         private Guna.UI2.WinForms.Guna2Button bt_back;
-        private Guna.UI2.WinForms.Guna2TextBox txt_pass;
-        private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button bt_clear;
         private Guna.UI2.WinForms.Guna2Button bt_update;
         private Guna.UI2.WinForms.Guna2Button bt_insert;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_gender;
     }
 }

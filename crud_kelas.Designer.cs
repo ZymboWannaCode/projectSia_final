@@ -38,12 +38,10 @@
             this.sub = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
             this.txt_search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.bt_search = new Guna.UI2.WinForms.Guna2Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bt_search = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,9 +90,7 @@
             this.tbview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
+            this.Column3});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,7 +185,8 @@
             this.txt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_search.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.ForeColor = System.Drawing.Color.Black;
             this.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_search.Location = new System.Drawing.Point(774, 244);
             this.txt_search.Name = "txt_search";
@@ -198,36 +195,6 @@
             this.txt_search.SelectedText = "";
             this.txt_search.Size = new System.Drawing.Size(520, 35);
             this.txt_search.TabIndex = 27;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "CODE";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "PROGRAM";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "NAME";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ROOM";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "LOCATION";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // bt_search
             // 
@@ -249,6 +216,24 @@
             this.bt_search.Size = new System.Drawing.Size(48, 35);
             this.bt_search.TabIndex = 25;
             this.bt_search.Click += new System.EventHandler(this.bt_search_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "CODE";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "PROGRAM";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "NAME";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // crud_kelas
             // 
@@ -285,7 +270,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

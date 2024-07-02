@@ -71,7 +71,7 @@ namespace projectSia_final
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand myCmd = new SqlCommand();
                 myCmd.Connection = connection;
-                myCmd.CommandText = "SELECT kode_admin, nama_prodi, nama_depan_admin, nama_belakang_admin, telp_admin, email_admin, password_admin " +
+                myCmd.CommandText = "SELECT kode_admin, nama_prodi, nama_depan_admin, nama_belakang_admin, gender_admin, telp_admin, email_admin " +
                     "FROM tb_admin " +
                     "INNER JOIN tb_prodi ON prodi_admin = kode_prodi " +
                     "WHERE status_admin=1";
@@ -83,7 +83,7 @@ namespace projectSia_final
                 tbview.Rows.Clear();
                 while (reader.Read())
                 {
-                    tbview.Rows.Add(reader["kode_admin"], reader["nama_prodi"], reader["nama_depan_admin"], reader["nama_belakang_admin"], reader["telp_admin"], reader["email_admin"], reader["password_admin"]);
+                    tbview.Rows.Add(reader["kode_admin"], reader["nama_prodi"], reader["nama_depan_admin"], reader["nama_belakang_admin"], reader["gender_admin"], reader["telp_admin"], reader["email_admin"]);
                 }
                 reader.Close();
                 connection.Close();
@@ -101,7 +101,9 @@ namespace projectSia_final
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand myCmd = new SqlCommand();
                 myCmd.Connection = connection;
-                myCmd.CommandText = "SELECT kode_admin, nama_prodi, nama_depan_admin, nama_belakang_admin, telp_admin, email_admin, password_admin, status_admin " +
+                myCmd.CommandText = "SELECT kode_admin, nama_prodi, nama_depan_admin, nama_belakang_admin, gender_admin, telp_admin, email_admin " +
+                    "FROM tb_admin " +
+                    "INNER JOIN tb_prodi ON prodi_admin = kode_prodi " +
                     "FROM tb_admin " +
                     "JOIN tb_prodi ON prodi_admin = kode_prodi " +
                     "WHERE (nama_depan_admin LIKE '%" + txt_search.Text + "%' OR nama_belakang_admin LIKE '%" + txt_search.Text + "%') AND status_admin = 1";

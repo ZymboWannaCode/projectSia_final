@@ -46,15 +46,20 @@ namespace projectSia_final
 
         private void bt_update_Click(object sender, EventArgs e)
         {
-            updatedata();
-            clear();
+            DialogResult del = messageBox_cus.Show("Confirm", "Are you sure to update this data?", MessageBoxIcon.Warning);
+
+            switch (del)
+            {
+                case DialogResult.Yes:
+                    updatedata();
+                    break;
+            }
         }
 
         private void bt_insert_Click(object sender, EventArgs e)
         {
             insertdata();
             clear();
-
         }
 
         private void bt_back_Click(object sender, EventArgs e)
@@ -205,6 +210,14 @@ namespace projectSia_final
             txt_kode.Text = txt_kode.Text = generateID("MK", newestID());
             txt_nama.Text = "";
             txt_sks.Text = "";
+        }
+
+        private void txt_sks_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -35,13 +35,13 @@
             this.bt_search = new Guna.UI2.WinForms.Guna2Button();
             this.bt_add = new Guna.UI2.WinForms.Guna2Button();
             this.tbview = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.sub = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
             this.txt_search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,6 +160,24 @@
             this.tbview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tbview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbview_CellClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "CODE";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "NAME";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "CREDIT";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -206,7 +224,8 @@
             this.txt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_search.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.ForeColor = System.Drawing.Color.Black;
             this.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_search.Location = new System.Drawing.Point(790, 244);
             this.txt_search.Name = "txt_search";
@@ -215,24 +234,6 @@
             this.txt_search.SelectedText = "";
             this.txt_search.Size = new System.Drawing.Size(520, 35);
             this.txt_search.TabIndex = 34;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "CODE";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "NAME";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "CREDIT";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // crud_matkul
             // 

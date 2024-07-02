@@ -60,7 +60,7 @@
             this.txt_sks.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_sks.Location = new System.Drawing.Point(228, 400);
             this.txt_sks.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txt_sks.MaxLength = 20;
+            this.txt_sks.MaxLength = 1;
             this.txt_sks.Name = "txt_sks";
             this.txt_sks.PasswordChar = '\0';
             this.txt_sks.PlaceholderForeColor = System.Drawing.Color.White;
@@ -68,6 +68,7 @@
             this.txt_sks.SelectedText = "";
             this.txt_sks.Size = new System.Drawing.Size(300, 30);
             this.txt_sks.TabIndex = 80;
+            this.txt_sks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sks_KeyPress);
             // 
             // lb_nadep
             // 

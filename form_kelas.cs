@@ -34,8 +34,6 @@ namespace projectSia_final
                 txt_kode.Text = data[0];
                 cb_prodi.Text = data[1];
                 txt_nama.Text = data[2];
-                txt_ruang.Text = data[3];
-                txt_lokasi.Text = data[4];
             }
             else
             {
@@ -52,12 +50,20 @@ namespace projectSia_final
 
         private void bt_update_Click(object sender, EventArgs e)
         {
-            updatedata();
+            DialogResult del = messageBox_cus.Show("Confirm", "Are you sure to update this data?", MessageBoxIcon.Warning);
+
+            switch (del)
+            {
+                case DialogResult.Yes:
+                    updatedata();
+                    break;
+            }
         }
 
         private void bt_insert_Click(object sender, EventArgs e)
         {
             insertdata();
+            clear();
         }
         private void updatedata()
         {
@@ -72,8 +78,6 @@ namespace projectSia_final
                 cmd.Parameters.AddWithValue("@kode_kelas", txt_kode.Text);
                 cmd.Parameters.AddWithValue("@prodi_kelas", Helper.GetElementByIndex(prodiID, cb_prodi.SelectedIndex));
                 cmd.Parameters.AddWithValue("@nama_kelas", txt_nama.Text);
-                cmd.Parameters.AddWithValue("@ruang_kelas", txt_ruang.Text);
-                cmd.Parameters.AddWithValue("@lokasi_ruang_kelas", txt_lokasi.Text);
                 cmd.Parameters.AddWithValue("@status_kelas", "1");
 
                 connection.Open();
@@ -81,7 +85,6 @@ namespace projectSia_final
                 connection.Close();
                 if (result != 0)
                 {
-                    clear();
                     MessageBox.Show("Class data successfully updated!", "Information");
                 }
                 else
@@ -99,9 +102,7 @@ namespace projectSia_final
         {
             if (string.IsNullOrWhiteSpace(txt_kode.Text) ||
                 string.IsNullOrWhiteSpace(cb_prodi.SelectedItem?.ToString()) ||
-                string.IsNullOrWhiteSpace(txt_nama.Text) ||
-                string.IsNullOrWhiteSpace(txt_ruang.Text) ||
-                string.IsNullOrWhiteSpace(txt_lokasi.Text))
+                string.IsNullOrWhiteSpace(txt_nama.Text))
             {
                 MessageBox.Show("All fields must be filled out before inserting data!", "Warning", MessageBoxButtons.OK);
                 return;
@@ -118,8 +119,6 @@ namespace projectSia_final
                 cmd.Parameters.AddWithValue("@kode_kelas", txt_kode.Text);
                 cmd.Parameters.AddWithValue("@prodi_kelas", Helper.GetElementByIndex(prodiID, cb_prodi.SelectedIndex));
                 cmd.Parameters.AddWithValue("@nama_kelas", txt_nama.Text);
-                cmd.Parameters.AddWithValue("@ruang_kelas", txt_ruang.Text);
-                cmd.Parameters.AddWithValue("@lokasi_ruang_kelas", txt_lokasi.Text);
                 cmd.Parameters.AddWithValue("@status_kelas", "1");
 
                 connection.Open();
@@ -127,7 +126,6 @@ namespace projectSia_final
                 connection.Close();
                 if (result != 0)
                 {
-                    clear();
                     MessageBox.Show("Class data successfully inserted!", "Information");
                 }
                 else
@@ -140,7 +138,6 @@ namespace projectSia_final
                 MessageBox.Show("Error : " + ex.Message);
                 return;
             }
-            clear();
         }
 
         private LinkedList<string> prodiID = new LinkedList<string>();
@@ -179,13 +176,8 @@ namespace projectSia_final
         private void clear()
         {
             txt_kode.Text = generateID("KL", newestID());
-            if (cb_prodi.Items.Count > 0)
-            {
-                cb_prodi.SelectedIndex = 0; // Ensure there is at least one item before setting the index
-            }
+            cb_prodi.SelectedIndex = -1; // Ensure there is at least one item before setting the index
             txt_nama.Text = "";
-            txt_ruang.Text = "";
-            txt_lokasi.Text = "";
         }
         private String generateID(String tipe, int id)
         {

@@ -37,15 +37,13 @@ namespace projectSia_final
         {
             searchdata();
         }
-        public static string[] selected = new string[5];
+        public static string[] selected = new string[3];
         private void tbview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selected[0] = tbview.SelectedCells[0].Value.ToString();
             selected[1] = tbview.SelectedCells[1].Value.ToString();
             selected[2] = tbview.SelectedCells[2].Value.ToString();
-            selected[3] = tbview.SelectedCells[3].Value.ToString();
-            selected[4] = tbview.SelectedCells[4].Value.ToString();
-
+            
             DialogResult act = dataAction.Show();
 
             if (act == DialogResult.Yes)
@@ -77,19 +75,16 @@ namespace projectSia_final
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand myCmd = new SqlCommand();
                 myCmd.Connection = connection;
-                myCmd.CommandText = "SELECT kode_kelas, nama_prodi, nama_kelas, ruang_kelas,  lokasi_ruang_kelas FROM tb_kelas INNER JOIN tb_prodi ON prodi_kelas = kode_prodi WHERE status_kelas!=0";
+                myCmd.CommandText = "SELECT kode_kelas, nama_prodi, nama_kelas FROM tb_kelas INNER JOIN tb_prodi ON prodi_kelas = kode_prodi WHERE status_kelas!=0";
                 myCmd.CommandType = CommandType.Text;
 
                 connection.Open();
                 SqlDataReader reader = myCmd.ExecuteReader();
-                tbview.Rows.Clear();
                 while (reader.Read())
                 {
                     tbview.Rows.Add(reader["kode_kelas"],
                         reader["nama_prodi"],
-                        reader["nama_kelas"],
-                        reader["ruang_kelas"],
-                        reader["lokasi_ruang_kelas"]);
+                        reader["nama_kelas"]);
                 }
                 reader.Close();
                 connection.Close();
@@ -108,8 +103,9 @@ namespace projectSia_final
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand myCmd = new SqlCommand();
                 myCmd.Connection = connection;
-                myCmd.CommandText = "SELECT kode_kelas, nama_prodi, nama_kelas, ruang_kelas,  lokasi_ruang_kelas FROM tb_kelas INNER JOIN tb_prodi ON prodi_kelas = kode_prodi WHERE status_kelas!=0 AND nama_kelas LIKE '%" + txt_search.Text +"%'";
+                myCmd.CommandText = "SELECT kode_kelas, nama_prodi, nama_kelas FROM tb_kelas INNER JOIN tb_prodi ON prodi_kelas = kode_prodi WHERE status_kelas!=0 AND nama_kelas LIKE '%" + txt_search.Text +"%'";
                 myCmd.CommandType = CommandType.Text;
+                
 
                 connection.Open();
                 SqlDataReader reader = myCmd.ExecuteReader();
@@ -118,9 +114,7 @@ namespace projectSia_final
                 {
                     tbview.Rows.Add(reader["kode_kelas"],
                         reader["nama_prodi"],
-                        reader["nama_kelas"],
-                        reader["ruang_kelas"],
-                        reader["lokasi_ruang_kelas"]);
+                        reader["nama_kelas"]);
                 }
                 reader.Close();
                 connection.Close();

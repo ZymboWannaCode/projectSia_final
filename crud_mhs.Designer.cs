@@ -34,11 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bt_add = new Guna.UI2.WinForms.Guna2Button();
             this.tbview = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.sub = new System.Windows.Forms.Label();
-            this.lb_name = new System.Windows.Forms.Label();
-            this.txt_search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.bt_search = new Guna.UI2.WinForms.Guna2Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +46,11 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.sub = new System.Windows.Forms.Label();
+            this.lb_name = new System.Windows.Forms.Label();
+            this.txt_search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.bt_search = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +86,6 @@
             this.tbview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(29)))), ((int)(((byte)(154)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,83 +156,6 @@
             this.tbview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tbview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbview_CellClick);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 861);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 16);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "*Click on the table row to make a change";
-            // 
-            // sub
-            // 
-            this.sub.AutoSize = true;
-            this.sub.BackColor = System.Drawing.Color.White;
-            this.sub.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sub.Location = new System.Drawing.Point(112, 112);
-            this.sub.Name = "sub";
-            this.sub.Size = new System.Drawing.Size(65, 22);
-            this.sub.TabIndex = 30;
-            this.sub.Text = "CRUD";
-            // 
-            // lb_name
-            // 
-            this.lb_name.AutoSize = true;
-            this.lb_name.BackColor = System.Drawing.Color.White;
-            this.lb_name.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name.Location = new System.Drawing.Point(101, 56);
-            this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(320, 56);
-            this.lb_name.TabIndex = 28;
-            this.lb_name.Text = "Student Data";
-            // 
-            // txt_search
-            // 
-            this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
-            this.txt_search.BorderRadius = 18;
-            this.txt_search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_search.DefaultText = "";
-            this.txt_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_search.Location = new System.Drawing.Point(790, 244);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.PasswordChar = '\0';
-            this.txt_search.PlaceholderText = "";
-            this.txt_search.SelectedText = "";
-            this.txt_search.Size = new System.Drawing.Size(520, 35);
-            this.txt_search.TabIndex = 34;
-            // 
-            // bt_search
-            // 
-            this.bt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_search.AutoRoundedCorners = true;
-            this.bt_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.bt_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_search.BorderRadius = 16;
-            this.bt_search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt_search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
-            this.bt_search.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_search.ForeColor = System.Drawing.Color.White;
-            this.bt_search.Image = global::projectSia_final.Properties.Resources.search_icon;
-            this.bt_search.Location = new System.Drawing.Point(1262, 244);
-            this.bt_search.Name = "bt_search";
-            this.bt_search.Size = new System.Drawing.Size(48, 35);
-            this.bt_search.TabIndex = 32;
-            this.bt_search.Click += new System.EventHandler(this.bt_search_Click);
             // 
             // Column1
             // 
@@ -306,6 +228,84 @@
             this.Column12.HeaderText = "ENTRY YEAR";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(114, 861);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(266, 16);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "*Click on the table row to make a change";
+            // 
+            // sub
+            // 
+            this.sub.AutoSize = true;
+            this.sub.BackColor = System.Drawing.Color.White;
+            this.sub.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sub.Location = new System.Drawing.Point(112, 112);
+            this.sub.Name = "sub";
+            this.sub.Size = new System.Drawing.Size(65, 22);
+            this.sub.TabIndex = 30;
+            this.sub.Text = "CRUD";
+            // 
+            // lb_name
+            // 
+            this.lb_name.AutoSize = true;
+            this.lb_name.BackColor = System.Drawing.Color.White;
+            this.lb_name.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_name.Location = new System.Drawing.Point(101, 56);
+            this.lb_name.Name = "lb_name";
+            this.lb_name.Size = new System.Drawing.Size(320, 56);
+            this.lb_name.TabIndex = 28;
+            this.lb_name.Text = "Student Data";
+            // 
+            // txt_search
+            // 
+            this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(79)))), ((int)(((byte)(222)))));
+            this.txt_search.BorderRadius = 18;
+            this.txt_search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_search.DefaultText = "";
+            this.txt_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_search.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.ForeColor = System.Drawing.Color.Black;
+            this.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_search.Location = new System.Drawing.Point(790, 244);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.PasswordChar = '\0';
+            this.txt_search.PlaceholderText = "";
+            this.txt_search.SelectedText = "";
+            this.txt_search.Size = new System.Drawing.Size(520, 35);
+            this.txt_search.TabIndex = 34;
+            // 
+            // bt_search
+            // 
+            this.bt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_search.AutoRoundedCorners = true;
+            this.bt_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.bt_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_search.BorderRadius = 16;
+            this.bt_search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.bt_search.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_search.ForeColor = System.Drawing.Color.White;
+            this.bt_search.Image = global::projectSia_final.Properties.Resources.search_icon;
+            this.bt_search.Location = new System.Drawing.Point(1262, 244);
+            this.bt_search.Name = "bt_search";
+            this.bt_search.Size = new System.Drawing.Size(48, 35);
+            this.bt_search.TabIndex = 32;
+            this.bt_search.Click += new System.EventHandler(this.bt_search_Click);
             // 
             // crud_mhs
             // 

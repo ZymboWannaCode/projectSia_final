@@ -34,9 +34,9 @@ namespace projectSia_final
                 cb_prodi.Text = data[1];
                 txt_nadep.Text = data[2];
                 txt_nabel.Text = data[3];
-                txt_telp.Text = data[4];
-                txt_email.Text = data[5];
-                txt_pass.Text = data[6];
+                cb_gender.Text = data[4];
+                txt_telp.Text = data[5];
+                txt_email.Text = data[6];
             } else
             { 
                 txt_kode.Text = generateID("AD", newestId());
@@ -47,7 +47,14 @@ namespace projectSia_final
 
         private void bt_update_Click(object sender, EventArgs e)
         {
-            updatedata();
+            DialogResult del = messageBox_cus.Show("Confirm", "Are you sure to update this data?", MessageBoxIcon.Warning);
+
+            switch (del)
+            {
+                case DialogResult.Yes:
+                    updatedata();
+                    break;
+            }            
         }
 
         private void bt_insert_Click(object sender, EventArgs e)
@@ -95,15 +102,16 @@ namespace projectSia_final
         }
         private void insertdata()
         {
-            string kode, prodi, nadep, nabel, telp, email, pass;
+            string kode, prodi, nadep, nabel, telp, email, pass, gender;
 
             kode = txt_kode.Text;
             prodi = Helper.GetElementByIndex(prodiID, cb_prodi.SelectedIndex);
             nadep = txt_nadep.Text;
             nabel = txt_nabel.Text;
+            gender = cb_gender.SelectedItem.ToString();
             telp = txt_telp.Text;
             email = txt_email.Text;
-            pass = txt_pass.Text;
+            pass = Helper.generatePassword();
 
 
             try
@@ -111,8 +119,17 @@ namespace projectSia_final
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand myCmd = new SqlCommand();
                 myCmd.Connection = connection;
-                myCmd.CommandText = "INSERT INTO tb_admin VALUES ('" + kode + "','" + prodi + "','" + nadep + "','" + nabel + "','" + telp + "','" + email + "','" + pass + "', 1)";
+                myCmd.CommandText = "INSERT INTO tb_admin VALUES ( @kode, @prodi, @nadep, @nabel, @telp, @email, @pass, @gender,  1)";
                 myCmd.CommandType = CommandType.Text;
+
+                myCmd.Parameters.AddWithValue("@kode", kode);
+                myCmd.Parameters.AddWithValue("@prodi", prodi);
+                myCmd.Parameters.AddWithValue("@nadep", nadep);
+                myCmd.Parameters.AddWithValue("@nabel", nabel);
+                myCmd.Parameters.AddWithValue("@gender", gender);
+                myCmd.Parameters.AddWithValue("@telp", telp);
+                myCmd.Parameters.AddWithValue("@email", email);
+                myCmd.Parameters.AddWithValue("@pass", pass);
 
                 connection.Open();
                 int result = Convert.ToInt32(myCmd.ExecuteNonQuery());
@@ -135,23 +152,38 @@ namespace projectSia_final
         }
         private void updatedata()
         {
-            string kode, prodi, nadep, nabel, telp, email, pass;
+            string kode, prodi, nadep, nabel, telp, email, pass, gender;
 
             kode = txt_kode.Text;
             prodi = Helper.GetElementByIndex(prodiID, cb_prodi.SelectedIndex);
             nadep = txt_nadep.Text;
             nabel = txt_nabel.Text;
+            gender = cb_gender.SelectedItem.ToString();
             telp = txt_telp.Text;
             email = txt_email.Text;
-            pass = txt_pass.Text;
 
             try
             {
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = connection;
-                cmd.CommandText = "UPDATE tb_admin SET prodi_admin='" + prodi + "', nama_depan_admin='" + nadep + "', nama_belakang_admin='" + nabel + "', telp_admin='" + telp + "', email_admin='" + email + "', password_admin = '" + pass + "' WHERE kode_admin='" + kode + "'";
+                cmd.CommandText = "UPDATE tb_admin " +
+                    "SET prodi_admin=@prodi, " +
+                    "nama_depan_admin=@nadep, " +
+                    "nama_belakang_admin=@nabel, " +
+                    "gender_admin=@gender, " +
+                    "telp_admin=@telp, " +
+                    "email_admin=@email " +
+                    "WHERE kode_admin=@kode";
                 cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@kode", kode);
+                cmd.Parameters.AddWithValue("@prodi", prodi);
+                cmd.Parameters.AddWithValue("@nadep", nadep);
+                cmd.Parameters.AddWithValue("@nabel", nabel);
+                cmd.Parameters.AddWithValue("@gender", gender);
+                cmd.Parameters.AddWithValue("@telp", telp);
+                cmd.Parameters.AddWithValue("@email", email);
 
                 connection.Open();
                 int result = Convert.ToInt32(cmd.ExecuteNonQuery());
@@ -179,7 +211,7 @@ namespace projectSia_final
             txt_nabel.Text = "";
             txt_telp.Text = "";
             txt_email.Text = "";
-            txt_pass.Text = "";
+            cb_gender.SelectedIndex = -1;
             cb_prodi.SelectedIndex = -1;
         }
         private string generateID(String tipe, int id)
@@ -236,10 +268,11 @@ namespace projectSia_final
 
         private void txt_telp_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != (char)Keys.Back  || txt_telp.Text.Length > 13)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
-                e.Handled = true;
+                e.Handled= true;
             }
+            
         }
     }
 }

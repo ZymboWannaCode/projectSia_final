@@ -46,5 +46,10 @@ namespace projectSia_final
         {
             loadForm(new crud_mhs());
         }
+
+        private void bt_prodi_Click(object sender, EventArgs e)
+        {
+            loadForm(new crud_prodi());
+        }
     }
 }
